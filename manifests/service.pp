@@ -1,7 +1,9 @@
-class apache::service {
+class appache::service (
+String $service_name = $::appache::service_name,
+) {
   service { 'apache-service' :
   ensure => running,
-  name => 'apache2',
+  name => $service_name,
   enable => 'true',
  } 
 }
