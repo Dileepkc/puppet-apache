@@ -42,7 +42,8 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class appache {
-
+class apache {
+class { 'apache::install': } ->
+class { 'apache::service': }
 
 }
